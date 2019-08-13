@@ -117,7 +117,6 @@ function onStoreUpdate() {
     const state = store.getState();
     document.getElementById('state').innerText = JSON.stringify(state, null, 2);
 
-
     let listHtml;
     if (state.flags.showOnlyCompleted) {
         listHtml = `<ul> ${state.todo.filter(x => x.completed).map(x => '<li>' + x.name + ' ' + x.completed + '</li>').join('')}</ul>`;
